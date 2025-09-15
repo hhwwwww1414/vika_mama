@@ -1,0 +1,49 @@
+НейроАктив — статический сайт
+
+Содержимое
+- index.html — разметка
+- styles.css — стили (адаптив в media queries)
+- script.js — мобильное меню (гамбургер)
+- logo.png — логотип
+
+Локальный просмотр
+1) Откройте файл `index.html` в браузере (двойной клик).
+
+Публикация (два простых варианта)
+
+Вариант A — GitHub Pages
+1) Создайте новый репозиторий на GitHub.
+2) В папке проекта выполните команды:
+   git init
+   git add .
+   git commit -m "Initial site"
+   git branch -M main
+   git remote add origin https://github.com/ВАШ_ЛОГИН/ВАШ_РЕПОЗИТОРИЙ.git
+   git push -u origin main
+3) В настройках репозитория GitHub → Pages:
+   - Source: выберите `Deploy from a branch`
+   - Branch: `main` и `/ (root)`
+4) Сохраните. Через 1–2 минуты сайт будет доступен по адресу вида:
+   https://ВАШ_ЛОГИН.github.io/ВАШ_РЕПОЗИТОРИЙ/
+
+Вариант B — Netlify (drag-and-drop)
+1) Зайдите на https://app.netlify.com/ и авторизуйтесь.
+2) На главной нажмите «Add new site» → «Deploy manually».
+3) Перетащите в область загрузки папку проекта (или .zip c файлами).
+4) Netlify выдаст постоянную ссылку на сайт, при необходимости подключите домен.
+
+Кастомный домен
+- Для GitHub Pages создайте запись CNAME у своего регистратора домена, укажите `ВАШ_ЛОГИН.github.io`.
+- В корне проекта можно добавить файл `CNAME` с вашим доменом (строкой), чтобы GitHub Pages закрепил домен.
+
+Настройка картинок на карточках
+- Замените плейсхолдеры в `styles.css`, добавив фоны к карточкам:
+  .services .card:nth-child(1) .card-photo { background: center/cover no-repeat url('images/neuro.jpg'); }
+  .services .card:nth-child(2) .card-photo { background: center/cover no-repeat url('images/logoped.jpg'); }
+  ...
+
+Мобильная адаптация
+- Гамбургер-меню (`<720px`) — кнопка в шапке, полноэкранное меню, запрет прокрутки фона.
+- Сетки превращаются в 2 колонки (`<720px`) и 1 колонку (`<480px`).
+- Низовая панель быстрых действий (Позвонить/Telegram) на мобильных.
+
