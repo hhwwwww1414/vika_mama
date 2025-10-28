@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  // Элементы для анимации
+  // Элементы для анимации (hero-card исключен, т.к. имеет встроенную CSS анимацию)
   const animatedElements = document.querySelectorAll(
-    '.section-title, .card, .contact-card, .goal, .hero-card, .subgrid > div, .list, .quote, .price'
+    '.section-title, .card, .contact-card, .goal, .subgrid > div, .list, .quote, .price'
   );
 
   animatedElements.forEach((el, index) => {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     top: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: #d36e70;
     z-index: 9999;
     transition: width 0.1s ease-out;
     border-radius: 0 3px 3px 0;
